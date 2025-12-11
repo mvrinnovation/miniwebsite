@@ -1,0 +1,206 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9;
+    /* Light gray background for the bottom half */
+    color: #333;
+}
+
+/* Variables for colors defined in the image */
+:root {
+    --primary-blue: #007bff;
+    /* The bright blue for button */
+    --dark-bluetext: #0056b3;
+    /* The title color */
+    --icon-blue: #004a99;
+    /* Darker blue for icons/logo base */
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero-section {
+    position: relative;
+    
+    /* Allow logo to overlap */
+    margin-bottom: 80px;
+    /* Space for the overlapping logo */
+}
+
+
+
+.hero-image {
+    position: relative;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    height: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 0;
+}
+
+.logo-container {
+    position: absolute;
+    bottom: -75px;
+    /* Moves logo half-way out of the header section */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centers it perfectly horizontally */
+    z-index: 10;
+}
+
+.main-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   Intro & Typography
+   ========================= */
+.intro-section {
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.brand-title {
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.brand-subtitle {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 400px;
+    margin: 0 auto;
+    /* Center the block */
+}
+
+/* =========================
+   Actions Section (Socials & CTA)
+   ========================= */
+.actions-section {
+    text-align: center;
+    padding: 20px 30px 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Styling placeholder text icons */
+.icon {
+    text-decoration: none;
+    color: var(--icon-blue);
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* In reality, replace these with SVG or FontAwesome icons */
+}
+
+.social-icons img {
+    width: 40px; /* Set a fixed width for the icons */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align icons nicely if they have different heights */
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.cta-button {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 15px 40px; /* Adjusted padding for text only */
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    /* Makes it perfectly round */
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* =========================
+   Gallery Grid
+   ========================= */
+.gallery-section {
+    padding: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Creates exactly 2 columns */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* Space between images */
+    gap: 20px;
+    margin-top: 20px;
+
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    /* Fixed height for consistency */
+    object-fit: cover;
+    /* Ensures images fill the box without stretching */
+    border-radius: 20px;
+    /* Rounded corners on images */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lastimage {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lastimage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* =========================
+   Responsive adjustments for larger screens
+   ========================= */
+@media (min-width: 768px) {
+
+    /* If viewd on desktop, make the grid 3 columns */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}

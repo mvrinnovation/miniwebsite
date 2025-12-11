@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVR Innovation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <img src="assite/mvr expirementations-02.png" alt="VR User" class="hero-image">
+        </div>
+
+        <div class="logo-container">
+            <img src="assite/mvrLOGO-08.png" alt="MVR Logo" class="main-logo">
+        </div>
+    </header>
+
+    <section class="intro-section">
+        <h1 class="brand-title">MVR INNOVATION</h1>
+        <p class="brand-subtitle">
+            Transforming reality with VR, AR, and XR solutions we create a new way of experiencing life.
+        </p>
+    </section>
+
+    <section class="actions-section">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/mvr.innovation/" target="_blank" rel="noopener noreferrer" class="icon">
+                <img src="assite/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/mvr-innovation/" target="_blank" rel="noopener noreferrer" class="icon">
+                <img src="assite/linkedin.png" alt="Linkedin">
+            </a>
+        </div>
+
+        <button class="cta-button" id="addContactBtn">Add contact</button>
+    </section>
+
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <img src="assite/official poster-mvr003_EN.jpg" alt="Portfolio 1">
+            <img src="assite/Free Surface Studio Laptop Mockup2.png" alt="Portfolio 2">
+            <img src="assite/01 Free iPhone 16 Pro Mockup Holding By Hand.png" alt="Portfolio 3">
+            <img src="assite/mvr expirementations-02.png" alt="Portfolio 4">
+        </div>
+        <div class="lastimage">
+            <img src="assite/how it works3.png" alt="Portfolio 6">
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('addContactBtn').addEventListener('click', function() {
+            
+            // --- 1. CONFIGURATION ---
+            const contact = {
+                name: "MVR Innovation",
+                title: "VR/AR Solutions",
+                phone: "+1234567890",
+                email: "info@mvrinnovation.com",
+                website: "https://www.mvrinnovation.com"
+            };
+            
+            // Base64 encoded logo image 
+            const logoBase64 = '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'; 
+
+            // Set the image format
+            const imageMimeType = 'PNG';
+
+            // --- 2. CREATE VCARD CONTENT ---
+            const vCardLines = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'FN:' + contact.name,
+                'ORG:' + contact.name,
+                'TITLE:' + contact.title,
+                'TEL;TYPE=WORK,VOICE:' + contact.phone,
+                'EMAIL:' + contact.email,
+                'URL:' + contact.website,
+                'PHOTO;TYPE=' + imageMimeType + ';ENCODING=B:' + logoBase64,
+                'END:VCARD'
+            ];
+
+            const vCardData = vCardLines.join('\n');
+
+            // --- 3. TRIGGER DOWNLOAD ---
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
+            
+            const newLink = document.createElement('a');
+            newLink.download = "MVR_Innovation.vcf";
+            newLink.textContent = contact.name;
+            newLink.href = url;
+            
+            newLink.click();
+            
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+
+</html>
